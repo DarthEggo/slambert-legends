@@ -1,3 +1,3 @@
 # slambert-legends
 
-#Chad Slambert
+- Chad Slambert
