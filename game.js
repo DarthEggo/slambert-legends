@@ -333,12 +333,12 @@ function updateTiles() {
       }
       if(Game.Mouse.x == clamp(Game.Mouse.x, recX, recX + recW) && Game.Mouse.y == clamp(Game.Mouse.y, recY, recY + recH)) {
         if(Game.Mouse.click == true) {
-					if(buildMode && tile.unit != "empty") {
-							tileMap[Game.Selected.y][Game.Selected.x].building = new Barracks("swordsmanBarracks", Game.Selected.x, Game.Selected.y, 0, 3, "yes", 3,"Swordsman");
-							buildingArray.push(tileMap[Game.Selected.y][Game.Selected.x].building);
-				}
-					var prevX = Game.Selected.x;
-					var prevY = Game.Selected.y;
+		if(buildMode && tile.unit != "empty") {
+			tileMap[Game.Selected.y][Game.Selected.x].building = new Barracks("swordsmanBarracks", Game.Selected.x, Game.Selected.y, 0, 3, "yes", 3,"Swordsman");
+			buildingArray.push(tileMap[Game.Selected.y][Game.Selected.x].building);
+		}
+	  var prevX = Game.Selected.x;
+	  var prevY = Game.Selected.y;
           Game.Selected.x = tile.x;
           Game.Selected.y = tile.y;
 					
@@ -420,11 +420,11 @@ function updateTiles() {
               }
             }
           }
-					if(tile.building != "empty") {
-						if(tile.terrain == "water") {
-							tile.building = "empty";
-						}
-					}
+	if(tile.building != "empty") {
+		if(tile.terrain == "water") {
+			tile.building = "empty";
+		}
+	}
         }
       }
       if(Game.Selected.x == tile.x && Game.Selected.y == tile.y) {
